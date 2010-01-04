@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Parser for URI Templates
 Summary(pl.UTF-8):	%{_pearname} - parser szablonów URI
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	126610662ab23ae628582737e3453376
+# Source0-md5:	432c823af101f6cc770c012daf98bebc
 URL:		http://pear.php.net/package/URI_Template/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
