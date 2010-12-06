@@ -4,12 +4,12 @@
 Summary:	%{_pearname} - Parser for URI Templates
 Summary(pl.UTF-8):	%{_pearname} - parser szablonów URI
 Name:		php-pear-%{_pearname}
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	fc0a736e50234500be8787c18236a08f
+# Source0-md5:	5edd1993a62dd5e1c8e4438d10652455
 URL:		http://pear.php.net/package/URI_Template/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -35,11 +35,7 @@ Ta klasa ma w PEAR status: %{_status}.
 %pear_package_setup
 
 # package maintainer helpers
-rm .%{php_pear_dir}/URI/makepackage.php
 rm .%{php_pear_dir}/data/URI_Template/runtests.sh
-
-# duplicate bullshit
-rm .%{php_pear_dir}/URI/URI/Template.php
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -47,7 +43,7 @@ install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
 # tests should not be packaged
-%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
+%{__rm} -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
